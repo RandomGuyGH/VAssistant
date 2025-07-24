@@ -47,23 +47,12 @@ speech_bubble_timer = None
 
 # Phrases for random walking text (already existing)
 walking_phrases = [
-    "Que belo dia para caminhar!",
-    "Para onde iremos agora?",
-    "Explorando o mundo...",
-    "Tenho um bom pressentimento!",
-    "Andar faz bem!",
-    "Um passo de cada vez...",
-    "Onde a aventura nos espera?",
-    "Observando o cenário."
+
 ]
 
 # NOVA LISTA: Frases para fatos aleatórios (com espaços para você preencher)
 random_fact_phrases = [
-    "Sabia que [FATO 1]? É fascinante!",
-    "Um fato interessante: [FATO 2].",
-    "Você sabia que [FATO 3]? Incrível!",
-    "Curiosidade do dia: [FATO 4].",
-    "Pensei em um fato legal: [FATO 5]."
+
 ]
 # --- End Global Variables ---
 
@@ -171,11 +160,11 @@ def executar_comando(comando):
 
     if comando == "google":
         mudar_sprite("navegador")
-        webbrowser.open("https://www.google.com")
+        webbrowser.open("")
         show_speech_bubble("Abrindo navegador")
     elif comando == "musica":
         mudar_sprite("musica")
-        webbrowser.open("http://googleusercontent.com/spotify.com/9")
+        webbrowser.open("")
         show_speech_bubble("Vamos ouvir algo")
     elif comando == "arquivos":
         mudar_sprite("pasta")
@@ -215,7 +204,7 @@ def executar_comando(comando):
         return
     elif comando == "jogo": # Command to open a game via Steam URI
         mudar_sprite(SPRITE_GAME)
-        steam_uri = "steam://rungameid/2357570"
+        steam_uri = ""
         try:
             os.startfile(steam_uri)
             print(f"DEBUG: Attempting to open Steam game via URI: {steam_uri}")
@@ -228,7 +217,7 @@ def executar_comando(comando):
 
         except Exception as e:
             print(f"ERROR: Could not open Steam game via URI: {e}")
-            print("Make sure Steam is installed and the game (ID 2357570) is in your library.")
+            print("Make sure Steam is installed and the game () is in your library.")
             show_speech_bubble("Erro ao abrir jogo!")
             mudar_sprite(SPRITE_IDLE)
     else: # If command is not recognized, go to idle sprite
