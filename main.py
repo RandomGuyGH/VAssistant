@@ -236,7 +236,7 @@ def executar_comando(comando):
     # NOVO COMANDO: Abrir Photoshop
     elif comando == "photoshop":
         mudar_sprite(SPRITE_PHOTOSHOP) # Use o sprite de Photoshop (se existir)
-        photoshop_path = r"C:\Program Files\Adobe\Adobe Photoshop 2022\Photoshop.exe" # <-- MUDAR ESTE CAMINHO
+        photoshop_path = r"C:\Program Files\Adobe\Adobe Photoshop 2022\Photoshop.exe"
         try:
             subprocess.Popen(photoshop_path) # Use Popen para não bloquear o script
             show_speech_bubble("Abrindo Photoshop!")
